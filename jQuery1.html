@@ -1,0 +1,32 @@
+
+<html>
+	<head>
+		<script src="jquery-3.0.0.js"></script>
+		<style>
+			.active{
+				color:white;
+				background-color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "target">
+			Hello world!
+		</div>
+		<div id = "JDH">
+			Wow!
+		</div>
+		<div class = "zz">
+			클래스!
+		</div>
+
+		<div class = "active">
+			기모지
+		</div>
+		<script>
+			// document.getElementById('target').innerHTML = 'world Hello'
+			//html문구, Class명 변경 , css 옵션 추가
+			$('#target,#JDH,.zz').html('world Hello').addClass('active').css('border','1px solid green'); 
+		</script>
+	</body>
+</html>

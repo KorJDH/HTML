@@ -1,0 +1,23 @@
+
+<html>
+	<head>
+		<style>
+			.active	{
+				color:red;
+				border:5px solid red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="target"> Hello world </div>
+		<input type="button" value="Click" 
+		onclick="document.getElementById('target').setAttribute('class','active'); alert('dsfsdf');" />
+
+		<script>
+			// #target{}
+			document.getElementById('target').innerHTML ="World Hello";
+			
+		</script>
+	</body>
+</html>

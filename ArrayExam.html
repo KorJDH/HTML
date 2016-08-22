@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta charset = "utf-8">
+	<h1> Array Exam </h1>
+	<p id ='lbl'></p>
+	<button type = 'button' onclick="ChangeVal()"> Change ! </button>
+</head>
+<body>
+	<script>
+		var arrEx = ['1번','2번','3번']
+		var i = 0
+
+		function ChangeVal()
+		{
+			if (i == 3){
+				i = 0 
+			}
+			document.getElementById('lbl').innerHTML = arrEx[i];
+			i++;
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!--
+.switchClass()는 선택한 요소의 클래스 값을 애니메이션 효과와 함께 제거하고 추가합니다.
+
+문법
+.switchClass( removeClassName, addClassName [, duration ] [, easing ] [, complete ] )
+
+removeClassName
+
+제거하려는 클래스 값을 넣습니다.
+
+addClassName
+
+추가하려는 클래스 값을 넣습니다.
+
+duration
+
+애니메이션 효과가 시작해서 끝날 때까지의 시간을 정합니다. 숫자, fast, slow를 넣을 수 있습니다.
+
+숫자일 때의 단위는 1/1000초이고, fast는 200, slow는 600에 해당합니다.
+
+easing
+
+애니메이션 효과를 정합니다.
+
+사용 가능한 값은 http://api.jqueryui.com/easings/를 참고하세요.
+
+complete
+
+애니메이션 효과가 끝난 후 실행할 작업을 정할 수 있습니다.
+!-->
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>Coding Factory</title>
+    <style>
+      .jb {
+        width: 200px;
+        padding: 20px 0px;
+        background-color: #2196F3;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .jb-red {
+        background-color: #F44336;
+      }
+      .jb-big {
+        width: 80%;
+        padding: 60px 0px;
+      }
+    </style>
+    <script   src="http://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+    
+    <script   src="http://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.js"   integrity="sha256-6HSLgn6Ao3PKc5ci8rwZfb//5QUu3ge2/Sw9KfLuvr8="   crossorigin="anonymous"></script>
+
+    <script>
+      jQuery( document ).ready( function() {
+        $( 'button' ).click( function() {
+          $( '.jb' ).switchClass( 'jb-red', 'jb-big', 2000, 'easeOutElastic' );
+          $( '.jb' ).switchClass( 'jb-big', 'jb-red', 2000, 'easeOutElastic' );
+        } );
+      } );
+    </script>
+  </head>
+  <body>
+    <p>
+      <button>Click</button>
+    </p>
+    <div class="jb jb-red">
+      <h1>Lorem</h1>
+    </div>
+  </body>
+</html>

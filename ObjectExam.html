@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<h1> Object Exam !</h1>
+	<p id = 'lbl'></p>
+	<button type = 'button' onclick="Show()"> Show Me! </button>
+	<button type = 'button' onclick= "alert(Profile.fullName())" > Alert Show</button>
+</head>
+<body>
+	<script>
+		var Profile= {name :'John' ,
+					  age : 25, 
+					  sex : '남',
+					  fullName : function() {
+					  	return this.name + " " + this.age + " " + this.sex;
+					  }
+					};
+		
+		function Show(){
+
+			var str = Profile.name + " " + Profile.age + " " + Profile.sex
+
+			document.getElementById('lbl').innerHTML = str
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<html>
+<head>
+	<p>Please input a number in the TextBox (0 < Value < 11)</p>
+	<input id = 'text'></input>
+	<button type = 'button' onclick="CheckData()"> Submit </button>
+</head>
+<body>
+	<script>
+		//<script src="myScript.js">		
+		
+		//인풋박스 값 체크 
+		function CheckData (){
+			var txtVal;
+			txtVal  = GetTextVal("text");
+			alert(isNaN(txtVal));
+
+			//isNaN : Not a Number
+			if (!(isNaN(txtVal)) && txtVal > 0 && txtVal < 11 ){
+				alert("Good!");
+			} else {
+				alert("No!   0 < Value < 11 ")
+				document.getElementById("text").value = ""
+			}
+
+		}
+
+		//인풋박스 입력값 ID로 가져오기
+		function GetTextVal(varName){
+			return document.getElementById(varName).value
+		}
+
+	</script>
+</body>
+</html>

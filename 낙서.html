@@ -1,0 +1,58 @@
+<script type="text/javascript">
+	document.domain = "safety.kongju.ac.kr";
+        var totalPage = '23';
+        var passedPage = '1';
+        var currentPage = '2'
+
+        function getCurrentPageNumber() {
+            return Number('2');
+        }
+
+        function FlashDynamicInsert(strLesson) {
+            var nWatchedPage = '2';
+            var url = 'http://' + document.location.host + '/Contents/46/flash/' + strLesson + "_" + getZeroPaddingString(nWatchedPage, 2) + ".swf?passedPage=" + passedPage + "&checkurl=" + nWatchedPage;
+            FlashObject(url, 1000, 660, "#ffffff");
+        }
+
+        function page_complete() {
+            var url = '/SafeEducation/SetMiraeNetPageComplete';
+
+            $.ajax({
+                type: "post",
+                url: url,
+                data: { contentNo: '90', strwatchedPage: '7few9tOtWLtDhmgrDVIJtA==', schedulememberNo: '57500' },
+                success: function (data) {
+                    if (data.issuccess != true) {
+                        alert(data.errormessage);
+                        if (data.isparentreload) {
+                            close();
+                        }
+                        return;
+                    }
+
+                    if (data.isparentreload) {
+                        if (typeof (opener) != 'undefined') {
+                            opener.document.location.reload();
+
+                        }
+                        alert("수고 하셨습니다. 해당 교육이 완료 되었습니다.");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert(error);
+                }
+            });
+        }
+
+        function direct_page(targetPageNumber) {
+            var page_name = '';
+            if (targetPageNumber < currentPage) {
+                page_name = getCurrentFileName() + '?scheduleNo=11&isPrev=true';
+            }
+            else {
+                page_name = getCurrentFileName() + '?scheduleNo=11';
+            }            
+            location.href = page_name;
+        }
+
+    </script>

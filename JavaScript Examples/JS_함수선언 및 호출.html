@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>Function | Coding Factory</title>
+    <style>
+      h1 {
+        font-family: Georgia;
+        font-style: italic;
+      }
+      h1 span {
+        color: #2196f3;
+      }
+    </style>
+    <script>
+      function jbFunc( jbName, jbJob ) {
+        document.write( '<h1>My name is <span>' + jbName + '</span>. I am a <span>' + jbJob + '</span>.</h1>' );
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      jbFunc( 'John', 'student' );
+      jbFunc( 'John' );
+      jbFunc( 'John', 'student', 'male' );
+    </script>
+
+    <!--
+    첫번째 줄은 인자의 개수와 값의 개수가 같습니다. 아무런 문제 없이 출력됩니다.
+
+    두번째 줄은 인자는 두 개이나 값은 한 개입니다. 값이 없는 인자는 undefined를 반환합니다.
+
+    세번째 줄은 인자는 두 개이나 값이 세 개입니다. 인자보다 많은 값은 무시됩니다.
+
+    !-->
+  </body>
+</html>
