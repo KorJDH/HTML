@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<style>
+		.Head{
+			font-size: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<form action = "action_page.jsp" method="post">
+		First name: <br>
+		<input type="text" name="firstname" value="Mickey"><br>
+
+		<br>
+		Last name: <br>	
+		<input type="text" name="lastname" value = "Mouse" >
+
+		<p>
+		<button> Submit</button>
+		</p>
+
+		<input type="radio" name="1" value="male"> male <br>
+		<input type="radio" name="2" value="female"> female <br>
+		<br>
+
+		<div class="Head">- Select - option</div>
+		<select name = "car">
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="fiat">Fiat</option>
+			<option value="audi">Audi</option>
+		</select>
+
+	</form>
+
+	<br><br>
+
+	<div class="Head">- Parse Value</div>
+
+	<form action="action_page.jsp" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		0
+		<input type="range" id="a" name="a" value = "50">
+		100+
+		<input type="number" id="b" name="b" value="50">
+		=
+		<output name="x" for="a b"> </output>
+		<br><br>
+		<input type="submit">
+	</form>
+
+	<br><br>
+	<div class="Head"> - Alert ! </div>
+
+	<button style="size=50" onclick="alert('Hello World!')"></button>
+
+	<br><br>
+	<div class="Head"> - 글자형태 태그 ! </div>
+	<div><i>Lorem ipsum dolor sit amet</i></div>
+	<div><small>Lorem ipsum dolor sit amet</small></div>
+	<div><sub>Lorem ipsum dolor sit amet</sub></div>
+	<div><sup>Lorem ipsum dolor sit amet</sup></div>
+	<div><ins>Lorem ipsum dolor sit amet</ins></div>
+	<div><del>Lorem ipsum dolor sit amet</del></div>
+	<div><b>Lorem ipsum dolor sit amet</b></div>
+
+	<br><br>
+	<div class="Head"> - 정의 목록</div>
+	<dl>
+		<dt>HTML5</dt>
+		<dd>Multimedia Tag</dd>
+		<dd>Connectivity</dd>
+		<dd>Device Access</dd>
+
+		<dt>Milk</dt>
+		<dd>Animation</dd>
+		<dd>3D Transform</dd>
+	</dl>
+
+	<br><br>
+	<div class="Head"> - 테이블 태그</div>
+	<table border="1">
+		<caption style="font-size:25px">My Table</caption>
+		<colgroup>
+			<col span="2" style="background:red"/>
+			<col  span="3" style="background:blue"/>
+		</colgroup>
+		<thead style="background:green">
+			<tr>
+				<!--<th colspan="3">Header 1</th> !-->
+				<th>Header 1</th>
+				<th>Header 2</th>
+				<th>Header 3</th>
+				<th>Header 4</th>
+				<th>Header 5</th>
+				<th>Header 6</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>Data 1</td>
+			<td>Data 1</td>
+			<td>Data 1</td>
+			<td>Data 1</td>
+			<td>Data 1</td>
+			<td>Data 1</td>
+		</tr>
+
+		<tr>
+			<td>Data2</td>
+			<td>Data2</td>
+			<td>Data2</td>
+			<td>Data2</td>
+			<td>Data2</td>
+			<td>Data2</td>
+		</tr>
+
+		<tr>
+			<td>Data3</td>
+			<td>Data3</td>
+			<td>Data3</td>
+			<td>Data3</td>
+			<td>Data3</td>
+			<td>Data3</td>
+		</tr>
+
+	</table>
+
+
+</body>
+</html>

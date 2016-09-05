@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<h1> Hide and Show !</h1>
+
+	<h2 id="demo"> Good Day ! </h2>
+	<script>
+		function ShowAndHide(tagID){
+			try{
+				ID = document.getElementById(tagID).style.display;
+			}catch(exception){
+				alert("존재하지 않는 태그명입니다.");
+			}finally{
+				
+			}
+			
+			if(ID == ""){
+				document.getElementById('demo').style.display='none';
+			}else{
+				document.getElementById('demo').style.display='';
+			}
+		}
+	</script>
+
+	<button type="button" onclick="ShowAndHide('demo')"> Click </button>
+</body>
+</html>
